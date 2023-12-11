@@ -179,7 +179,7 @@ export default function Chat() {
 
     return (
 
-        <div className="relative flex h-screen overflow-hidden">
+        <div className="relative flex h-full overflow-hidden">
             <div className={` flex flex-col z-10 w-1/3 lg:w-1/5 bg-gray-800 h-full block ${isSidebarVisible ? 'flex-0 w-64 absolute left-0 block index-0' : 'hidden sm:block'}`}>
                 <div className="bg-white h-full flex flex-col">
                     <div className="cursor-pointer flex flex-row" >
@@ -272,7 +272,7 @@ export default function Chat() {
                     </div>
                 </div>
             </div>
-            <div className=" flex-1 flex-col z-1 px-1 h-screen" onClick={() => { if (isSidebarVisible) toggleSidebar() }}>
+            <div className=" flex-1 flex-col z-1 px-1 h-full" onClick={() => { if (isSidebarVisible) toggleSidebar() }}>
                 <div className="flex flex-col bg-blue-50 h-full">
                     <div className="flex-grow">
                         <div className="flex">
@@ -300,7 +300,7 @@ export default function Chat() {
                         {!!selectedUserId && (
                             <div className="relative h-full">
 
-                                <div className="overflow-y-scroll absolute top-0 left-0 right-0 bottom-3 scrollContainer gap-2 ">
+                                <div className="overflow-y-scroll absolute top-0 left-0 right-0 bottom-12 scrollContainer gap-2 ">
                                     {messages.length === 0 && (
                                         <div className="flex flex-grow h-full items-center justify-center">
                                             <div className="text-gray-400 text-2xl">
