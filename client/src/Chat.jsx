@@ -55,6 +55,10 @@ export default function Chat() {
     }, [focus]);
 
     useEffect(() => {
+        connectToWs();
+    }, [selectedUserId]);
+
+    function connectToWs() {
         const token = getToken()
         if (token) {
             let url = import.meta.env.VITE_SERVER_URL
@@ -70,7 +74,7 @@ export default function Chat() {
                 }, 1000);
             });
         }
-    }, [])
+    }
 
     function handleMessage(e) {
         const messageData = JSON.parse(e.data)
