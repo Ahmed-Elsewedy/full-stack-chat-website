@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input:focus{
+    outline: 0.1px solid rgb(128, 136, 188);   
+}
+
+.confirmPassword, .confirmPassword:focus{
+  outline: 2px solid #E57373;
+}
+
+ input{
+  padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      resize: vertical; /* Allow vertical resizing of the textarea*/ 
+      min-height: 40px;
+      max-height: 100px;
+      outline: none;
+      overflow: hidden;
+} 
+
+.scrollContainer {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.scrollContainer::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+.scrollContainer::-webkit-scrollbar-thumb {
+  background-color: #1e3785; /* Thumb color */
+  border-radius: 6px;
+}
+
+.scrollContainer::-webkit-scrollbar-track {
+  background-color: relative;
+  /* Track color */
+  /* border-radius: 6px; */
+  }
+
+.shadowHover:hover{
+  box-shadow: 0.5px 0.5px 1px 1px gray;
+}
